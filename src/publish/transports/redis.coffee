@@ -24,3 +24,6 @@ module.exports = (config = {}) ->
   send: (obj) ->
     msg = JSON.stringify(obj)
     conn.pub.publish "ss:event", msg
+  
+  get: ->
+    conn
