@@ -22,3 +22,6 @@ module.exports = () ->
   load: ->
     @use 'internal' unless transport?
     transport(config)
+  
+  get: ->
+    transport
