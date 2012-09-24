@@ -18,21 +18,21 @@ exports.options =
 exports.store =
 
   use: (nameOrStore, options) ->
-    sessionStore = if nameOrStore == 'redis'
+    sessionStore = null
+    if nameOrStore == 'redis'
       RedisStore = require('connect-redis')(connect)
-      new RedisStore(options)
+      sessionStore = new RedisStore(options)
       
       # add some listeners
-      RedisStore.on 'connect', () ->
+      sessionStore.on 'connect', () ->
         console.log "[Redis-SessionStore] Connected..."
       
-      RedisStore.on 'disconnect', () ->
+      sessionStore.on 'disconnect', () ->
         console.error "[Redis-SessionStore] Disconnected..."
-      
       
     else
       # Allow any Connect Session Store *instance* to be used
-      nameOrStore
+      sessionStore = nameOrStore
   
   get: ->
     sessionStore
