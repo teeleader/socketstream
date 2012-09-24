@@ -15,7 +15,12 @@ module.exports = (config = {}) ->
     conn[name] = redis.createClient(port, host, options)
     conn[name].auth(config.pass) if config.pass 
     conn[name].select(config.db) if config.db
-
+    
+    # listen for error events
+    conn[name].on 'error', (err) ->
+      console.error "[Redis-PubSub] Connection: #{name} - Error: #{err}"
+    
+  
   listen: (cb) ->
     conn.sub.subscribe "ss:event"
     conn.sub.on 'message', (channel, msg) ->
