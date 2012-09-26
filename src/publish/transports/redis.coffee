@@ -17,10 +17,10 @@ module.exports = (config = {}) ->
     conn[name].select(config.db) if config.db
     
     # listen for events
-    conn[name].on 'connect', (err) ->
+    conn[name].on 'connect', () ->
       console.error "[Redis-PubSub] Connection: #{name} - Connected"
     
-    conn[name].on 'end', (err) ->
+    conn[name].on 'end', () ->
       console.error "[Redis-PubSub] Connection: #{name} - Disconnected"
     
     conn[name].on 'error', (err) ->

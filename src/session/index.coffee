@@ -27,8 +27,11 @@ exports.store =
       sessionStore.on 'connect', () ->
         console.log "[Redis-SessionStore] Connected..."
       
-      sessionStore.on 'end', () ->
-        console.error "[Redis-SessionStore] Disconnected..."
+      sessionStore.on 'disconnect', () ->
+        console.error "[Redis-SessionStore] Disconnected/Error..."
+      
+      sessionStore.on 'error', (err) ->
+        console.error "[Redis-SessionStore] Error... #{err}"
       
     else
       # Allow any Connect Session Store *instance* to be used
