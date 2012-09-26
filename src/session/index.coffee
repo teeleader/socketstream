@@ -27,7 +27,7 @@ exports.store =
       sessionStore.on 'connect', () ->
         console.log "[Redis-SessionStore] Connected..."
       
-      sessionStore.on 'disconnect', () ->
+      sessionStore.on 'end', () ->
         console.error "[Redis-SessionStore] Disconnected..."
       
     else

@@ -16,7 +16,13 @@ module.exports = (config = {}) ->
     conn[name].auth(config.pass) if config.pass 
     conn[name].select(config.db) if config.db
     
-    # listen for error events
+    # listen for events
+    conn[name].on 'connect', (err) ->
+      console.error "[Redis-PubSub] Connection: #{name} - Connected"
+    
+    conn[name].on 'end', (err) ->
+      console.error "[Redis-PubSub] Connection: #{name} - Disconnected"
+    
     conn[name].on 'error', (err) ->
       console.error "[Redis-PubSub] Connection: #{name} - Error: #{err}"
     
