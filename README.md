@@ -2,7 +2,7 @@
 
 # SocketStream
 
-_Latest release: 0.3.2 ([view changelog](https://github.com/socketstream/socketstream/blob/master/HISTORY.md))_
+_Latest release: 0.3.5 ([view changelog](https://github.com/socketstream/socketstream/blob/master/HISTORY.md))_
 
 A fast, modular Node.js web framework dedicated to building single-page realtime apps
 
@@ -13,7 +13,7 @@ SocketStream is a new breed of web framework that uses websockets to push data t
 
 By taking care of the basics, SocketStream frees you up to focus on building your social/chat app, multiplayer game, trading platform, sales dashboard, or any kind of web app that needs to display realtime streaming data. All personal tastes (e.g. Vanilla JS vs CoffeeScript, Stylus vs Less) are catered for with optional npm modules that integrate perfectly in seconds, without bloating the core.
 
-Learn more by [taking a tour](http://www.socketstream.org/tour) of the features, or watching the [introductory video](http://vimeo.com/43027679) (recorded May 2012). 
+Learn more by [taking a tour](http://www.socketstream.org/tour) of the features, or watching [a recent talk](http://www.youtube.com/watch?v=LOS1lpWXphs) (recorded September 2012). 
 
 
 ### Why SocketStream?
@@ -39,9 +39,9 @@ SocketStream is MIT licensed.
 
 ### Status
 
-SocketStream 0.3 is now stable enough for production use internally (behind a firewall). Several pioneering users are successfully hosting external apps in production, though we ask you to use caution and appreciate that SocketStream is new software which has yet to be battle hardened.
+SocketStream 0.3 is now stable enough for production use internally (behind a firewall). Several pioneering users are successfully hosting external apps in production, though we ask you to use caution and appreciate that SocketStream is new software which has yet to be battle hardened. SocketStream 0.3 will continue to be updated with bug fixes and minor feature enhancements.
 
-SocketStream 0.3 will continue to be updated with bug fixes and minor feature enhancements. All major development work is now going into SocketStream 0.4 ([read announcement](https://groups.google.com/forum/?fromgroups#!topic/socketstream/gUqMba0dUJg)) which builds upon the features and ideas in 0.3.
+All major development work is going on in [SocketStream 0.4](https://github.com/socketstream/socketstream-0.4) which builds upon the features and ideas in 0.3. Thanks to a new modular approach, SocketStream 0.4 will provide the initial ease of an integrated web framework with the flexibility of small modules that do one thing well. [Read more](https://gist.github.com/socketstream/5461356).
 
 
 ### Contact
@@ -100,7 +100,7 @@ All this means no more connection latency, HTTP header overhead, polling, or clu
 
 ### Getting Started
 
-Ready to give it a whirl? Install [Node 0.8.X](http://nodejs.org/#download) then get SocketStream from npm:
+Ready to give it a whirl? Install [Node 0.10.X](http://nodejs.org/#download) then get SocketStream from npm:
 
     [sudo] npm install -g socketstream
 
@@ -266,8 +266,7 @@ SocketStream works great with [Nodejitsu.com](http://www.nodejitsu.com), as well
 
 ##### Will it run on Windows?
 
-Yes. We have many users running SocketStream on Windows without problems.
-
+Yes. We have many users running SocketStream on Windows without problems. Make sure that you have [Make for Windows](http://gnuwin32.sourceforge.net/packages/make.htm) installed beforehand.
 
 ##### How can I share code between client and server?
 
@@ -310,18 +309,13 @@ Back end scaling has yet to be properly documented, but we're keen to continue l
 
 ### Videos
 
+(most recent at end)
 
-* November 2011 - [Presentation to KrtConf.com](http://2011.krtconf.com/videos/owen_barnes), Portland
-* May 2012 - [Presentation to LNUG.org](http://vimeo.com/43027679), London (most recent)
-
-
-### Upcoming Speaking Events
-
-* [Oslo Node Meetup Group, 19 September 2012](http://www.meetup.com/NodeJSOslo/events/78674102)
-* [LXJS, Lisbon, 28-29 September 2012](http://2012.lxjs.org)
-* [Node Dublin, 18-19 October 2012](http://www.nodedublin.com)
-* [KrtConf, Portland, 23-24 October 2012](http://krtconf.com)
-* [QCon, San Francisco, 7-9 November 2012](http://qconsf.com)
+* [KrtConf.com, Portland, November 2011](http://2011.krtconf.com/videos/owen_barnes)
+* [LNUG.org, London, May 2012](http://vimeo.com/43027679)
+* [LXJS, Lisbon, September 2012](http://www.youtube.com/watch?v=LOS1lpWXphs)
+* [RealtimeConf, Portland, October 2012](http://2012.realtimeconf.com/video/owen-barnes)
+* [QCon, San Francisco, November 2012](http://www.infoq.com/presentations/SocketStream)
 
 
 ### Developing on the SocketStream core
@@ -365,11 +359,6 @@ Thanks also to the many who have contributed code and ideas. We plan to properly
 ### Credits
 
 Thanks to Guillermo Rauch (Socket.IO), TJ Holowaychuk (Stylus, Jade), Substack (Browserify), Jeremy Ashkenas (CoffeeScript), Mihai Bazon (UglifyJS), Isaac Schlueter (NPM), Salvatore Sanfilippo (Redis) and the many others who's amazing work has made SocketStream possible. Special thanks to Ryan Dahl (creator of node.js) for the inspiration to do things differently.
-
-
-### Thanks!
-
-SocketStream is kindly sponsored by AOL.
 
 
 ### License

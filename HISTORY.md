@@ -1,3 +1,39 @@
+0.3.5 / 2013-08-13
+==================
+
+* Fixed a bug with the Websocket transport wrapper working in Internet Explorer 8
+* Fixed a bug where Symlinked directories in client/static/ were not resolved correctly (thanks wrouesnel)
+* Added GZIP compression of static assets
+* Fixed a bug where client-side socket reconnect prints an error if there is no window.ss (thanks krsch)
+* Improved getting x-forwarded-for from socket (Owen Barnes)
+* Fixed a bug with the app generator not including some required directories (thanks burninggramma)
+* Allow setting of "secure" cookie attribute when using HTTPS
+* Set correct clientIp when XFF header is present (thanks SkareCrow)
+
+
+
+0.3.4 / 2013-03-13
+==================
+
+* Fixed bug preventing Request Responders (e.g. ss-angular) from working
+* Push `req.clientIp` from Engine.io to RPC requests as before
+* Confirmed working in Node 0.10.0. Be sure to report any bugs if found
+
+
+
+0.3.3 / 2013-02-21
+==================
+
+* Major change: Now bundled with Engine.IO instead of Socket.IO. This improves support for non-websocket connections and is generally more efficient (big thanks to paulbjensen). Note: If you want to stick with Socket.IO, please avoid this upgrade - the rest of the changes are minor. 
+
+##### Bug fixes
+
+* Improved caching of assets when loading client code on demand (thanks kraz)
+* Added `npm start` command to newly generated apps (thanks paulbjensen)
+* Report correct client IP address when using a proxy (thanks sveisvei)
+
+
+
 0.3.2 / 2012-09-15
 ==================
 
