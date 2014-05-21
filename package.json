@@ -1,12 +1,12 @@
 {
-  "name":         "socketstream",
+  "name":         "teeleader-socketstream",
   "description":  "A fast, modular Node.js framework dedicated to building realtime single-page apps",
   "version":      "0.3.10",
   "homepage":     "http://www.socketstream.org",
   "author":       "Owen Barnes <owen@socketstream.org>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/socketstream/socketstream"
+    "url": "https://github.com/teeleader/socketstream"
   },
   "contributors": [
     "Paul Jensen",
