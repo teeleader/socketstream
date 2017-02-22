@@ -1,12 +1,12 @@
 {
-  "name":         "socketstream",
-  "description":  "A fast, modular Node.js framework dedicated to building realtime single-page apps",
-  "version":      "0.3.2-2",
-  "homepage":     "http://www.socketstream.org",
-  "author":       "Owen Barnes <owen@socketstream.org>",
+  "name": "teeleader-socketstream",
+  "description": "A fast, modular Node.js framework dedicated to building realtime single-page apps",
+  "version": "0.4.0",
+  "homepage": "http://www.socketstream.org",
+  "author": "Krishna Glick <krishnaglick@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/socketstream/socketstream"
+    "url": "https://github.com/teeleader/socketstream.git"
   },
   "contributors": [
     "Paul Jensen",
@@ -19,29 +19,36 @@
     "Michael Lawson"
   ],
   "dependencies": {
-    "colors":           "= 0.6.0-1",
-    "commander":        "= 1.1.1",
-    "eventemitter2":    "= 0.4.11",
-    "apitree":          "= 1.1.0",
-    "uglify-js":        "= 2.2.2",
-    "clean-css":        "= 0.9.0",
-    "semver":           "= 1.1.1",
-    "socket.io":        "= 0.9.11",
-    "redis":            "= 0.8.2",
-    "connect":          "= 2.4.6",
-    "connect-redis":    "= 1.4.4",
-    "chokidar":         "= 0.5.0"
+    "apitree": "^1.2.0",
+    "chokidar": "^1.6.1",
+    "clean-css": "^4.0.8",
+    "colors": "^1.1.2",
+    "commander": "^2.9.0",
+    "connect": "^3.6.0",
+    "connect-redis": "^3.2.0",
+    "eventemitter2": "^3.0.1",
+    "redis": "^2.6.5",
+    "semver": "^5.3.0",
+    "socket.io": "^1.7.3",
+    "uglify-js": "^2.7.5"
   },
   "devDependencies": {
-    "coffee-script":    "= 1.4.0",
-    "mocha":            "= 1.2.1",
-    "should":           "= 0.6.3"
+    "coffee-script": "^1.12.4",
+    "mocha": "^3.2.0",
+    "should": "^11.2.0"
   },
   "scripts": {
     "test": "make test"
   },
-  "directories":  { "lib": "./lib", "doc": "./doc" },
-  "main":         "./index.js",
-  "engines":      { "node": ">= 0.6.0" },
-  "bin":          { "socketstream": "./bin/socketstream" }
+  "directories": {
+    "lib": "./lib",
+    "doc": "./doc"
+  },
+  "main": "./index.js",
+  "engines": {
+    "node": ">= 6.3.1"
+  },
+  "bin": {
+    "socketstream": "./bin/socketstream"
+  }
 }
